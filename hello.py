@@ -19,3 +19,4 @@ for number in range(1,10):
 		print "cinco"
 
 		
+# https://docs.python.org/2/tutorial/datastructures.html
