@@ -2,6 +2,7 @@
 import re
 import datetime
 import csv
+from collections import Counter
 
 file = '/var/log/syslog'
 regexp = '^([a-zA-Z]+\s?\d+\s?\d+\:\d+\:\d+).*'
@@ -13,10 +14,13 @@ for line in open(file):
 	print "%s" % (match.group(1))
 	lines.append(match.group(1))
 
+print lines.count("Mar 13 03:26:25")
+c = Counter(lines)
+print c.items()
 #Extract Date
 dt_obj = datetime.datetime.strptime(lines[1], "%b %d %H:%M:%S")
 print dt_obj
-print repr(dt_obj.minute) +" " + repr(dt_obj.day)
+print "minuto: " + repr(dt_obj.minute) +" " + "dia:" + repr(dt_obj.day)
 
 #Write CSV
 with open('/home/hugo/Test/test.csv', 'wb') as myfile:
