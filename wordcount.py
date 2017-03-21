@@ -1,11 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
-logfile = open("log_file", "r") 
+file = '/home/hugo/Test/text.txt'
 
-wordcount=0
-my_word="apple"
-for line in logfile:
-    if my_word in line.split():
-        wordcount += 1
+def contar(word):
+	count = 0
+	for i in open(file):
+		for j in i.split():
+			if word == j:
+				count = count + 1
+	return count
 
-print my_word, wordcount
+if __name__ == '__main__':
+	word=raw_input("Dime una palabra: ")
+	print contar(word)
