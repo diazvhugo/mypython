@@ -1,6 +1,0 @@
-Python Qs:
-1. Write Program to get the most frequency occurring in file?
-2. Given a list and a number find two numbers in the list that sums up to the number given?
-3. Write Program to print a tree in level order traversal?
-4. Write a function that accept the file, count and return the exact occurrence of a word based on count?
-5. List a=[ 1,2,3 none, none] list b=[4,5,3] Output=[1,4,2,5,3,3] ?
