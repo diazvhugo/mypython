@@ -2,7 +2,7 @@
 
 import re
 
-file='/home/vict9977/Python_test/access.log'
+file='access.log'
 regexp = '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
 
 match = []
